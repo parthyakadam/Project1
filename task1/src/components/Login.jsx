@@ -1,11 +1,12 @@
-import { Avatar, Button, Checkbox, FormControlLabel, Grid, Link, Paper, TextField, Typography } from '@mui/material'
+import { Avatar, Button, Checkbox, FormControlLabel, Grid, Paper, TextField, Typography } from '@mui/material'
 import { green } from '@mui/material/colors'
-import LockIcon from '@mui/icons-material/Lock';
+import LockIcon from '@mui/icons-material/Lock'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   return (
-    <Grid>
+    <Grid>      
         <Paper elevation={10} sx={{padding:5, height:'70vh', width:250, margin: '20px auto'}}>
             <Grid align={'center'}>
                 <Avatar sx={{ bgcolor: green[500] }}><LockIcon /></Avatar>
@@ -16,16 +17,18 @@ const Login = () => {
             <TextField label='Password' placeholder='Enter password' type='password' fullWidth required sx={{paddingBottom: 1}}/>
 
             <FormControlLabel control={<Checkbox defaultChecked />} label="Remember Me" />
-
-            <Button type='submit' color='primary' variant='contained' fullWidth >Sign In</Button>
-
+            
+            <Link to='/home'>
+              <Button type='submit' color='primary' variant='contained' fullWidth >Sign In</Button>
+            </Link>
+            
             <Typography sx={{paddingY: 1}}>
-                <Link href='#' > Forgot Password? </Link>
+              
             </Typography>
             <Typography sx={{paddingY: 1}}> Do you have an account? 
-                <Link href='#' sx={{textDecoration: 'none'}}> Sign Up </Link>
+              <b><Link to='/register'>Sign Up</Link></b>
             </Typography>
-        </Paper>
+        </Paper>        
     </Grid>
   )
 }

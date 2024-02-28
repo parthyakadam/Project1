@@ -1,0 +1,21 @@
+// import { styled } from '@mui/material'
+// export const DICONTAINER = styled('div')(
+//   ({ backgroundColor }: { backgroundColor: string }) => ({
+//     width: '100%',
+//     backgroundColor: backgroundColor,
+//     borderRadius: '4px',
+//     marginTop: '12px',
+//   })
+// )
+// export const SUBCONTAINER = styled('div')({
+//   display: 'flex',
+//   flexDirection: 'column',
+//   padding: '15px',
+//   borderRadius: '10px',
+// })export const StyledLabel = styled(Label)({
+//   textAlign: 'left !important' as React.CSSProperties['textAlign'],
+// })
+// export const StyledValue = styled(Label)({
+//   textAlign: 'left !important' as React.CSSProperties['textAlign'],
+//   marginTop: '3px',
+// })

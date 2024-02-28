@@ -1,14 +1,22 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Login from './assets/components/login'
+import Login from './components/Login'
+import Home from './components/Home'
+import PageNotFound from './components/PageNotFound'
+import CreateAccount from './components/CreateAccount'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <Login />
+      <Router>        
+        <Routes>
+          <Route path='/register' element={<CreateAccount />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='*' element={<PageNotFound />}/>
+        </Routes>
+      </Router>
     </>
   )
 }
